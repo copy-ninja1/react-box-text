@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# custom-react-scroller
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![NPM](https://img.shields.io/npm/v/custom-react-scroller.svg)](https://www.npmjs.com/package/react-box-text) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## Available Scripts
+## Install
 
-In the project directory, you can run:
+```bash
+npm install --save react-box-text
+```
 
-### `yarn start`
+## Screenshot Example
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![alt text](https://github.com/copy-ninja1/custom-react-scroller/blob/main/image/react-box-text.png?raw=true)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Props
 
-### `yarn test`
+- `texts`: Array of texts to display (required)
+- `backgroundColor`: BackgroundColor of the box. (optional)
+- `textColor`: textColor of the texts. (optional)
+- `borderColor`: borderColor of the box. (optional)
+- `dotColor`: dotColor of the box. (optional)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `yarn build`
+```jsx
+import React from "react";
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+const App = () => {
+  return (
+    <div>
+      <BoxText
+        textColor="#0088ff"
+        dotColor="#0088ff"
+        borderColor="#0088ff"
+        texts={["Look", "Good"]}
+      ></BoxText>
+    </div>
+  );
+};
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+export default App;
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Made with :heart:
 
-### `yarn eject`
+## License
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+MIT © [copy-ninja1](https://github.com/copy-ninja1)
