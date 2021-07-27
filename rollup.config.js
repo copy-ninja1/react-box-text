@@ -10,16 +10,20 @@ import packageJson from "./package.json";
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
     input: "index.tsx",
+    // dest: './dist/bundle.js',
+
     output: [
         {
             file: packageJson.main,
             format: "cjs",
-            sourcemap: true
+            sourcemap: true,
+            exports: 'auto'
         },
         {
             file: packageJson.module,
             format: "esm",
-            sourcemap: true
+            sourcemap: true, exports: 'auto'
+
         }
     ],
     plugins: [
@@ -29,5 +33,6 @@ export default {
         typescript(),
         postcss(),
         terser()
-    ]
+    ],
+    external: ['react'],
 };

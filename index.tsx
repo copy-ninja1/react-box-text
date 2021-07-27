@@ -1,12 +1,17 @@
 import React from 'react';
-import './App.css';
 import { Box, Text } from './app.style'
 
 interface Props {
-  texts: Array<any>;
+  texts: Array<any>
+  textColor: String
+  backgroundColor: String
+  borderColor: String
+  dotColor: String
+
+
 }
-function App({ texts }: Props) {
-  const [text, setText] = React.useState('Buy');
+function App({ texts, backgroundColor, textColor, borderColor, dotColor }: Props) {
+  const [text, setText] = React.useState(texts[0]);
   const [textLength, setTextLength] = React.useState(0);
 
   const [fadeState, setFadeState] = React.useState('fade-in');
@@ -28,15 +33,15 @@ function App({ texts }: Props) {
     return () => clearInterval(fadeInterval);
   }, [fadeState, textLength, texts]);
   return (
-    <Box.Container>
-      <Box.DotOne></Box.DotOne>
-      <Box.DotTwo></Box.DotTwo>
-      <Box.DotThree></Box.DotThree>
-      <Box.DotFour></Box.DotFour>
-      <Text className={fadeState}>
+    <Box.Container backgroundColor={`${backgroundColor}`} borderColor={`${borderColor}`} >
+      <Box.DotOne dotColor={`${dotColor}`}></Box.DotOne>
+      <Box.DotTwo dotColor={`${dotColor}`}></Box.DotTwo>
+      <Box.DotThree dotColor={`${dotColor}`}></Box.DotThree>
+      <Box.DotFour dotColor={`${dotColor}`}></Box.DotFour>
+      <Text textColor={`${textColor}`}>
         {text}
       </Text>
-    </Box.Container>
+    </Box.Container >
   )
 }
 
