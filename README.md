@@ -1,6 +1,6 @@
-# custom-react-scroller
+# react-box-text
 
-[![NPM](https://img.shields.io/npm/v/custom-react-scroller.svg)](https://www.npmjs.com/package/react-box-text) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-box-text.svg)](https://www.npmjs.com/package/react-box-text) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
@@ -10,7 +10,7 @@ npm install --save react-box-text
 
 ## Screenshot Example
 
-![alt text](https://github.com/copy-ninja1/custom-react-scroller/blob/main/image/react-box-text.png?raw=true)
+![alt text](https://github.com/copy-ninja1/react-box-text/blob/main/image/react-box-text.png?raw=true)
 
 ## Props
 
