@@ -1,14 +1,12 @@
 import React from 'react';
 import { Box, Text } from './app.style'
-
+import './default.animation.css'
 interface Props {
   texts: Array<any>
   textColor: String
   backgroundColor: String
   borderColor: String
   dotColor: String
-
-
 }
 function App({ texts, backgroundColor, textColor, borderColor, dotColor }: Props) {
   const [text, setText] = React.useState(texts[0]);
@@ -38,7 +36,7 @@ function App({ texts, backgroundColor, textColor, borderColor, dotColor }: Props
       <Box.DotTwo dotColor={`${dotColor}`}></Box.DotTwo>
       <Box.DotThree dotColor={`${dotColor}`}></Box.DotThree>
       <Box.DotFour dotColor={`${dotColor}`}></Box.DotFour>
-      <Text textColor={`${textColor}`}>
+      <Text className={fadeState} textColor={`${textColor}`}>
         {text}
       </Text>
     </Box.Container >
