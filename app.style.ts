@@ -11,6 +11,7 @@ interface Itext {
 
 interface Idot {
     readonly dotColor?: string
+    readonly dotSize?: number
 }
 
 const Box = {
@@ -30,8 +31,8 @@ const Box = {
     transform:translate(-50%,-50%);
     position: absolute;
     background-color:${(props) => props.dotColor !== 'undefined' ? props.dotColor : "#ddd"};
-    width: 4px;
-    height: 4px;
+    width: ${(props) => props.dotSize !== undefined ? `${props.dotSize}px` : '8px'};
+    height: ${(props) => props.dotSize !== undefined ? `${props.dotSize}px` : '8px'};
     border-radius: 50%;
     `,
     DotTwo: styled.div<Idot>`
@@ -40,8 +41,8 @@ const Box = {
     transform:translate(50%,-50%);
     position: absolute;
     background-color:${(props) => props.dotColor !== 'undefined' ? props.dotColor : "#ddd"};
-    width: 4px;
-    height: 4px;
+    width: ${(props) => props.dotSize !== undefined ? `${props.dotSize}px` : '8px'};
+    height: ${(props) => props.dotSize !== undefined ? `${props.dotSize}px` : '8px'};
     border-radius: 50%;
     `,
     DotThree: styled.div<Idot>`
@@ -50,8 +51,8 @@ const Box = {
     transform:translate(-50%,-50%);
     position: absolute;
     background-color:${(props) => props.dotColor !== 'undefined' ? props.dotColor : "#ddd"};
-    width: 4px;
-    height: 4px;
+    width: ${(props) => props.dotSize !== undefined ? `${props.dotSize}px` : '8px'};
+    height: ${(props) => props.dotSize !== undefined ? `${props.dotSize}px` : '8px'};
     border-radius: 50%;
     `,
     DotFour: styled.div<Idot>`
@@ -60,8 +61,8 @@ const Box = {
     transform:translate(50%,-50%);
     position: absolute;
     background-color:${(props) => props.dotColor !== 'undefined' ? props.dotColor : "#ddd"};
-    width: 4px;
-    height: 4px;
+    width: ${(props) => props.dotSize !== undefined ? `${props.dotSize}px` : '8px'};
+    height: ${(props) => props.dotSize !== undefined ? `${props.dotSize}px` : '8px'};
     border-radius: 50%;
     `
 }

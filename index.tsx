@@ -3,12 +3,13 @@ import { Box, Text } from './app.style'
 import './default.animation.css'
 interface Props {
   texts: Array<any>
-  textColor: String
-  backgroundColor: String
+  textColor: string
+  backgroundColor: string
   borderColor: String
-  dotColor: String
+  dotColor: string
+  dotSize: number
 }
-function App({ texts, backgroundColor, textColor, borderColor, dotColor }: Props) {
+function App({ texts, backgroundColor, textColor, borderColor, dotColor, dotSize }: Props) {
   const [text, setText] = React.useState(texts[0]);
   const [textLength, setTextLength] = React.useState(0);
 
@@ -32,10 +33,10 @@ function App({ texts, backgroundColor, textColor, borderColor, dotColor }: Props
   }, [fadeState, textLength, texts]);
   return (
     <Box.Container backgroundColor={`${backgroundColor}`} borderColor={`${borderColor}`} >
-      <Box.DotOne dotColor={`${dotColor}`}></Box.DotOne>
-      <Box.DotTwo dotColor={`${dotColor}`}></Box.DotTwo>
-      <Box.DotThree dotColor={`${dotColor}`}></Box.DotThree>
-      <Box.DotFour dotColor={`${dotColor}`}></Box.DotFour>
+      <Box.DotOne dotSize={dotSize} dotColor={`${dotColor}`}></Box.DotOne>
+      <Box.DotTwo dotSize={dotSize} dotColor={`${dotColor}`}></Box.DotTwo>
+      <Box.DotThree dotSize={dotSize} dotColor={`${dotColor}`}></Box.DotThree>
+      <Box.DotFour dotSize={dotSize} dotColor={`${dotColor}`}></Box.DotFour>
       <Text className={fadeState} textColor={`${textColor}`}>
         {text}
       </Text>
