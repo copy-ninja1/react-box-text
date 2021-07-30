@@ -19,6 +19,7 @@ npm install --save react-box-text
 - `textColor`: textColor of the texts. (optional)
 - `borderColor`: borderColor of the box. (optional)
 - `dotColor`: dotColor of the box. (optional)
+- `dotSize`: size of the dot in px. (optional)
 
 ## Usage
 
@@ -32,6 +33,7 @@ const App = () => {
         textColor="#0088ff"
         dotColor="#0088ff"
         borderColor="#0088ff"
+        dotSize={12}
         texts={["Look", "Good"]}
       ></BoxText>
     </div>
