@@ -6,11 +6,16 @@
 
 ```bash
 npm install --save react-box-text
+npm insatll --save styled-components
 ```
 
 ## Screenshot Example
 
 ![alt text](https://github.com/copy-ninja1/react-box-text/blob/main/image/react-box-text.png?raw=true)
+
+## Demo Example
+
+[Demo](https://codesandbox.io/s/react-box-text-3muwf?file=/src/App.js)
 
 ## Props
 
@@ -25,6 +30,7 @@ npm install --save react-box-text
 
 ```jsx
 import React from "react";
+import BoxText from "react-box-text";
 
 const App = () => {
   return (

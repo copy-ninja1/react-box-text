@@ -1,8 +1,10 @@
 {
   "name": "react-box-text",
   "version": "2.2.0",
+  "description": "A react component to hide and show text in a box",
   "private": false,
   "license": "MIT",
+  "author": "emmanuel uchewa",
   "repository": "copy-ninja1/react-box-text",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
